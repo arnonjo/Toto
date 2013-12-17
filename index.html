@@ -15,6 +15,12 @@
 		<!--[if IE 7]>
 			<link rel="stylesheet" href="css/ie7.css" type="text/css" />
 		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+		<!-- Flags from: https://github.com/lafeber/world-flags-sprite  -->
+
+
+
+
 	</head>
 	<body>
 		<div class="page">
@@ -28,9 +34,14 @@
 				</ul>
 			</div>
 
-<!-- ___________________________Table ___________________________-->
 
-			<div class="UsersGames">
+
+<!---________________________Side Bar________________________--> 
+
+
+
+			<div class="SideBar">
+
 				<div id="users">
 	   				<input class="search" placeholder="Search" />
 	  				<button class="sort" data-sort="name"> Sort by name</button>
@@ -38,7 +49,25 @@
 	            	<ul class="list"></ul>
 	            </div>
 
-	            <div id="Games">
+
+	        </div>
+
+
+
+
+
+
+
+
+<!-- ___________________________Table ___________________________-->
+
+
+<!--
+
+			<div class="UsersGames">
+
+
+	            <div id="games">
 	   				<input class="search" placeholder="Search" />
 	  				<button class="sort" data-sort="name"> Sort by name</button>
 	  
@@ -46,10 +75,57 @@
 	            </div>
 
 	        </div>
+-->
+
+
+	        <div class="games">
+	        	<table class="gamestable">
+	        		<tr class = "gameshead">
+	        		    <td class = "match"> Match </td>
+    					<td class = "date"> Date </td> 
+    					<td class = "time"> Time </td>
+    					<td class = "venue"> Venue </td>
+    					<td class = "result">  </td>
+
+
+ <!--   					
+    					<td class = "Oponent1Flag"> D </td>
+    					<td class =  "Oponent1"> Argentina </td> 
+    					<td class =  "Score1"> 2 </td> 
+    					<td class =  "Score2"> 3 </td>
+    					<td class =  "Oponent2"> France </td>
+    					<td class =  "Oponent2Flag"> F </td>
+-->
+
+    				</tr>
+
+<!--
+	        		<tr>
+	        		    <td class = "match"> 1 </td>
+    					<td class = "Date"> 22/11 </td> 
+    					<td class = "Time"> 14:33 </td>
+    					<td class = "Venue"> Rio De Janero </td>
+    					<td class = "Oponent1Flag"> D </td>
+    					<td class =  "Oponent1"> Argentina </td> 
+    					<td class =  "Score1"><input type="number" min="0"> </td> 
+    					<td class =  "Score2"> 3 </td>
+    					<td class =  "Oponent2"> France </td>
+    					<td class =  "Oponent2Flag"> F </td>
+    				</tr>
+-->
+
+	        	</table>
+
+
 
 			<script src="js/Main.js"></script> 
 
 
+
+
+
+
+<!--
 			<div class="body">
 				<div id="featured">
 					<h3>Who's going to Win?</h3>
@@ -86,6 +162,8 @@
 					</li>
 				</ul>
 			</div>
+
+-->
 			<div class="footer">
 				<ul>
 					<li><a href="index.html">Home</a></li>

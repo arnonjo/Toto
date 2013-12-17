@@ -31,6 +31,94 @@ userList.add({
   born: 1983
 });
 
+/*---------------------Games---------------------*/
+
+
+var GamesOptions = {
+  valueNames: [ 'Match', 'Date', 'Time', 'Venue', 'Oponent1Flag', 'Oponent1', 'Score1', 'Score2', 'Oponent2', 'Oponent2Flag'],
+  item:'<li class="GameEntry"><a class="Match"></a><a class="Date"></a><a class="Time"></a><a class="Venue"></a><a class="Oponent1Flag"></a><a class="Oponent1"></a><a class="Score1"></a><a class="Score2"></a><a class="Oponent2"></a><a class="Oponent2Flag"></a></li>'
+};
+
+var GamesValues = [{
+    Match: 1,
+    Date: '22/11',
+    Time: '14:33',
+    Venue: 'Rio De Janero',
+    Oponent1Flag: 'D',
+    Oponent1: 'Argentina',
+    Score1: 2, 
+    Score2: 3, 
+    Oponent2: 'France', 
+    Oponent2Flag: 'F'
+
+  },
+  {
+    Match: 1,
+    Date: '22/11',
+    Time: '14:33',
+    Venue: 'Rio De Janero',
+    Oponent1Flag: 'D',
+    Oponent1: 'Argentina',
+    Score1: 2, 
+    Score2: 3, 
+    Oponent2: 'France', 
+    Oponent2Flag: 'F'
+  },
+  {
+    Match: 1,
+    Date: '22/11',
+    Time: '14:33',
+    Venue: 'Rio De Janero',
+    Oponent1Flag: 'D',
+    Oponent1: 'Argentina',
+    Score1: 2, 
+    Score2: 3, 
+    Oponent2: 'France', 
+    Oponent2Flag: 'F'
+}];
+
+/*
+var GamesList = new List('games', GamesOptions, GamesValues);
+
+GamesList.add({
+    Match: 1,
+    Date: '22/11',
+    Time: '14:33',
+    Venue: 'Rio De Janero',
+    Oponent1Flag: 'D',
+    Oponent1: 'Argentina',
+    Score1: 2, 
+    Score2: 3, 
+    Oponent2: 'France', 
+    Oponent2Flag: 'F'
+});
+*/
+
+
+$(document).ready(function(){
+
+   $(".gameshead").after(
+    "<tr><td class = 'match'> 1 </td>" + 
+    "<td class = 'date'> 22/11 </td>" +
+    "<td class = 'time'> 14:33 </td>" + 
+    "<td class = 'venue'> Rio De Janero </td>" +
+    "<td class = 'f32'><li class='flag ar'></li></td>" +
+    "<td class = 'oponent1'> Argentina </td>" + 
+    "<td><input class = 'score1' type='number' min='0' style='width:20px'></td>" + 
+    "<td><input class = 'score2' type='number' min='0' style='width:20px' ></td>" +
+    "<td class = 'oponent2'> France </td>" +
+    "<td class = 'f32'><li class='flag fr'></li></td>"
+
+    );
+
+});
+
+
+
+
+
+
+
 
    tournamentID = "52a59b8e8cff1c0200000009"; 
 

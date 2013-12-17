@@ -59,7 +59,37 @@ body{
 
 
 
+/*--------------------- Side Bar ------------------------*/
+
+.SideBar{
+	width:  240px;
+	height: 500px;
+	background-color: white;
+	opacity: 0.8;
+	position: fixed;
+	left: 0px;
+	top: 50px;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+
+}
+
+#users {
+
+	width:450px;
+	/*margin:40px 0px 0px 0px;*/
+	/*padding:0 10px;*/
+	overflow:hidden;
+	/*position: absolute;*/
+	float: left;
+	
+
+
+
+
 /*------------------------- Body ------------------------*/ 
+
+/*
 .body{
 	width:940px;
 	margin:0 auto;
@@ -220,7 +250,8 @@ body{
 .body ul li div.featured ul{
 	overflow:hidden;
 	margin:2px 0 0 10px;
-	
+	*/
+	/*
 }
 .body ul li div.featured ul li:first-child{
 	margin:0;
@@ -293,9 +324,29 @@ body{
 	color:#5D5D5D;
 }
 
+*/
+}
 
-/*--------------------List 1------------------------*/
 
+
+
+/*--------------------List 1 users------------------------*/
+
+/*
+.GameEntry{
+	display: inline;
+	margin: 10px;
+}
+*/
+
+/*
+a{
+	margin: 10px;
+}
+/*
+
+
+/*
 .UsersGames {
 	width:940px;
 	margin:0 auto;
@@ -305,32 +356,18 @@ body{
 
 }
 
-#users {
+*/
 
-	width:450px;
-	/*margin:40px 0px 0px 0px;*/
-	/*padding:0 10px;*/
-	overflow:hidden;
-	/*position: absolute;*/
-	float: left;
-	
 
-}
 
-#Games {
 
-	width:450px;
-	/*margin:0px 40px 0px 0px;*/
-	/*padding:0 10px;*/
-	overflow:hidden;
-	/*
-	position: absolute;
-	left: 550px;
-	*/
-	float: right;
-	
 
-}
+
+
+
+
+
+
 
 .list {
   	font-family:sans-serif;
@@ -343,6 +380,10 @@ body{
   padding:10px;
   box-shadow: inset 0 1px 0 #fff;
 }
+
+
+
+
 .avatar {
   max-width: 150px;
 }
@@ -363,12 +404,11 @@ input {
   border:solid 1px #ccc;
   border-radius: 5px;
   padding:7px 14px;
-/*  margin-bottom:10px;
-  margin-left: 150px; */
   	display:block;
 	float:left;
 	outline:none;
 }
+
 
 }
 input:focus {
@@ -427,8 +467,48 @@ input:focus {
 }
 
 
+/*--------------------Games Body-------------------*/
 
 
+.games {
+
+	width:900px;
+	/*margin:0px 40px 0px 0px;*/
+	/*padding:0 10px;*/
+	overflow:hidden;
+	/*
+	position: absolute;
+	left: 550px;
+	float: right;
+	*/
+	margin-left: 260px;
+
+}
+
+
+.gameshead {
+	font-weight: bold;
+
+}
+
+table.gamestable{
+margin: 30px;
+
+}
+td{
+	text-align: center;
+	padding: 1px 7px;
+}
+
+td.venue {
+	padding-right: 150px;
+	padding-left: 10px;
+	text-align: left;
+}
+
+td.result {
+	padding-left: 60px;
+}
 
 /*------------------------- Footer ------------------------*/ 
 .footer{
