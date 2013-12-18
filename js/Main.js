@@ -5,35 +5,49 @@
 var tournament;
 var tournamentID;
 var questions;
+var users;
+var emails;
 
 var options = {
-  valueNames: [ 'name', 'born' ],
-  item: '<li><h3 class="name"></h3><p class="born"></p></li>'
+  valueNames: [ 'name', 'score' ],
+  item: '<li class = "userline"><a class="name"></a><span class="score"></span></li>'
 };
 
 var values = [{
     name: 'Jonny Strömberg',
-    born: 1986
+    score: 1986
   },
   {
     name: 'Jonas Arnklint',
-    born: 1985
+    score: 1985
+  },
+    {
+    name: 'Jonas Arnklint',
+    score: 1985
+  },
+    {
+    name: 'Jonas Arnklint',
+    score: 1985
+  },
+    {
+    name: 'Jonas Arnklint',
+    score: 1985
   },
   {
     name: 'Martina Elm',
-    born: 1986
+    score: 1986
 }];
 
 var userList = new List('users', options, values);
 
 userList.add({
   name: "Gustaf Lindqvist",
-  born: 1983
+  score: 1983
 });
 
 /*---------------------Games---------------------*/
 
-
+/*
 var GamesOptions = {
   valueNames: [ 'Match', 'Date', 'Time', 'Venue', 'Oponent1Flag', 'Oponent1', 'Score1', 'Score2', 'Oponent2', 'Oponent2Flag'],
   item:'<li class="GameEntry"><a class="Match"></a><a class="Date"></a><a class="Time"></a><a class="Venue"></a><a class="Oponent1Flag"></a><a class="Oponent1"></a><a class="Score1"></a><a class="Score2"></a><a class="Oponent2"></a><a class="Oponent2Flag"></a></li>'
@@ -76,7 +90,7 @@ var GamesValues = [{
     Oponent2: 'France', 
     Oponent2Flag: 'F'
 }];
-
+*/
 /*
 var GamesList = new List('games', GamesOptions, GamesValues);
 
@@ -97,6 +111,9 @@ GamesList.add({
 
 $(document).ready(function(){
 
+
+
+
    $(".gameshead").after(
     "<tr><td class = 'match'> 1 </td>" + 
     "<td class = 'date'> 22/11 </td>" +
@@ -111,7 +128,6 @@ $(document).ready(function(){
 
     );
 
-});
 
 
 
@@ -120,7 +136,22 @@ $(document).ready(function(){
 
 
 
-   tournamentID = "52a59b8e8cff1c0200000009"; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   tournamentID = "52b055b74d67270200000001"; 
 
     /*Same origin security problem bypass - change to simple get once running on same server */
 
@@ -134,23 +165,75 @@ $(document).ready(function(){
       //alert("Data: " + xhr.responseText + "\nStatus: " );
       tournament = eval("(" + xhr.responseText + ')');
       questions = tournament.questions;
+      users = tournament.users;
+      emails = tournament.emails;
 
-      
-      for (var i = 0; i<questions.length ; i++) {
+
+
+      //Validate if tournament.ok == 1 , If not error! 
+
+  for (var i = 0; i<questions.length ; i++) {
+
+  $(".gameshead").after(
+      "<tr><td class = 'match'>" + questions[i].matchNumber + "</td>" + 
+      "<td class = 'date'> " + questions[i].date + " </td>" +
+      "<td class = 'time'> " + questions[i].time + " </td>" + 
+      "<td class = 'venue'> " + questions[i].venue + " </td>" +
+      "<td class = 'f32'><li class='flag " + questions[i].firstCountryCode + "'></li></td>" +
+      "<td class = 'oponent1'> " + questions[i].firstCountryName + " </td>" + 
+      "<td><input class = 'score1' type='number' min='0' style='width:20px'></td>" + 
+      "<td><input class = 'score2' type='number' min='0' style='width:20px' ></td>" +
+      "<td class = 'oponent2'> " + questions[i].secondCountryName + " </td>" +
+      "<td class = 'f32'><li class='flag " + questions[i].secondCountryCode + "'></li></td>"
+
+      );
+console.log (questions[0]);
+/*
+
+poinst: {type: Number, required:true},
+isDefault: {type:Number, default:0},
+matchNumber: Number,
+date: String,
+time: String,
+venue: String,
+firstCountryCode: String,
+firstCountryName: String,
+secondCountryCode: String,
+secondCountryName: String,
+score1: {type: Number, default:-1},
+score2: {type: Number, default:-1}
+*/
+
+
+}
+
+//----------------Parse Users for User list - Shouldn't be "Questions" ------------------
+
+      for (var i = 0; i<users.length ; i++) {
         
-        userList.add({
-        name: questions[i].question,
-        born: 1983
-         
-      });
-    }
+            userList.add({
+            name: users[i].userName,
+            score: 1983
+             
+          });
+      }
 
-      userList.add({
-        name: "hdh" + tournament.response,
-        born: 1983
-    });
+      for (var i = 0; i<emails.length ; i++) {
+              
+            userList.add({
+            name: emails[i],
+            score: 1983
+             
+          });
+      }
+
   };
   xhr.send(null);
+
+
+
+});
+
   //---------------------------------
 /*
   userList.add({
