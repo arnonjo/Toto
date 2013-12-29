@@ -108,7 +108,17 @@ body{
 	
 }
 
+.newheader a#guess{
+	display:block;
+	float:left;
+	outline:none;
 
+	font-size:16px;
+	text-decoration:none;
+	color:#5e5e5e;
+	font-family: 'RokkittRegular';
+	padding:15px 0 0 20px;
+}
 
 .newheader ul{
 	margin:0;
@@ -124,7 +134,7 @@ body{
 	color:#f78117;
 }
 
-.newheader a#newtour:hover, .newheader a#leaderboardtitle:hover{
+.newheader a#newtour:hover, .newheader a#leaderboardtitle:hover, .newheader a#guess:hover{
 	color:#f78117;
 }
 

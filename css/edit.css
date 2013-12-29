@@ -51,6 +51,7 @@
 	top: 5px;
 	width: 180px;
 	float: none;
+	font-size: 17px
 }
 
 .SideBar{
@@ -67,21 +68,60 @@
 	position: relative;
 	top: 100px;
 	left: 260px;
-	height: 70px;
+	height: 60px;
 	width: 800px;
-	padding: 20px;
+	padding: 15px;
+}
+
+.entername a.editnametitle{
+	font-size: 24px;
 }
 
 .entername input.namefield{
-	background-color: white;
-	color: white;
-	opacity: 1;
+	
 	float: right;
+	width: 300px;
+	height: 30px;
+	font-size: 24px;
+	margin-right: 100px;
+
 }
+
+
+.choosetype {
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.8);
+	/*opacity: 0.8;*/
+	overflow-y:hidden;
+	position: relative;
+	top: 130px;
+	left: 260px;
+	height: 60px;
+	width: 800px;
+	padding: 15px;
+}
+
+.choosetype form.chooseTypeRadio{
+	padding: 10px;
+}
+
+.choosetype input[type=radio]{
+	float: none;
+	margin: 3px;
+	display: inline;
+}
+
+
+
+
+
+
 
 .games {
 	position: relative;
 	top: 100px;
 
 }
+
+
 

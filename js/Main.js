@@ -151,7 +151,8 @@ $(document).ready(function(){
 
 
 
-   tournamentID = "52b055b74d67270200000001"; 
+   /*tournamentID = "52b055b74d67270200000001"; */
+   tournamentID = "52c042fb6819e90200000032"; 
 
     /*Same origin security problem bypass - change to simple get once running on same server */
 
